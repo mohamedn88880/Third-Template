@@ -1,0 +1,80 @@
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+
+}
+
+:root {
+    --main-theme-color: #2196f3;
+    --main-theme-alt: #1787e0;
+
+}
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* End Global Rules */
+/* Start Components */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* Extra Extra Small */
+@media (max-width: 576px) {}
+
+/* Extra Small */
+
+@media (min-width: 577px) {
+    .container {
+        width: calc(100vw - 30px);
+
+    }
+
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+
+    }
+
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+
+    }
+
+}
+
+button,
+input[type=submit],
+input[type=reset] {
+    cursor: pointer;
+}
+
+/* End Components */
