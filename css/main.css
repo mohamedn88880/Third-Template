@@ -15,6 +15,8 @@ body {
 :root {
     --main-theme-color: #2196f3;
     --main-theme-alt: #1787e0;
+    --main-transition: 0.3s;
+    --semi-transparent-text: ;
 
 }
 
@@ -44,10 +46,18 @@ ul {
 @media (max-width: 576px) {}
 
 /* Extra Small */
-
 @media (min-width: 577px) {
     .container {
         width: calc(100vw - 30px);
+
+    }
+
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
 
     }
 
@@ -71,6 +81,7 @@ ul {
 
 }
 
+
 button,
 input[type=submit],
 input[type=reset] {
@@ -78,3 +89,185 @@ input[type=reset] {
 }
 
 /* End Components */
+
+/* Start Header */
+
+header {
+    box-shadow: 0 0 10px #ddd;
+    background-color: white;
+
+}
+
+header .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+header .container .logo {
+    text-decoration: none;
+    color: var(--main-theme-color);
+    font-weight: bold;
+    font-size: 26px;
+    height: 73px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header .container .main-nav {
+    display: flex;
+
+}
+
+header .container .main-nav>li>a {
+    position: relative;
+    height: 73px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: initial;
+    padding: 0 30px;
+    text-decoration: none;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+
+}
+
+header .container .main-nav>li>a::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0%;
+    height: 4px;
+    background-color: var(--main-theme-color);
+    transition: inherit;
+    -webkit-transition: inherit;
+    -moz-transition: inherit;
+    -ms-transition: inherit;
+    -o-transition: inherit;
+}
+
+header .container .main-nav>li>a:hover {
+    background-color: #f0f0f0;
+    color: var(--main-theme-color);
+
+}
+
+header .container .main-nav>li>a:hover::before {
+    width: 100%;
+
+}
+
+@media (max-width: 767px) {
+    header .container {
+        flex-direction: column;
+
+    }
+
+    header .container .main-nav>li>a {
+        padding: 10px;
+        font-size: 1rem;
+        height: 40px;
+
+    }
+
+    header .container .logo {
+        height: 60px;
+
+    }
+
+}
+
+/* End Header */
+/* Start Landing */
+.landing {
+    position: relative;
+
+}
+
+.landing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ececec;
+    z-index: -1;
+    transform: skewY(-7deg);
+    -webkit-transform: skewY(-7deg);
+    -moz-transform: skewY(-7deg);
+    -ms-transform: skewY(-7deg);
+    -o-transform: skewY(-7deg);
+    transform-origin: top left;
+}
+
+.landing .container {
+    min-height: calc(100vh - 90px);
+    display: flex;
+    align-items: center;
+    padding-bottom: 120px;
+
+}
+
+.landing .container .image {}
+
+.landing .container .image img {
+    max-width: 100%;
+
+}
+
+.landing .container .text {
+    flex-grow: 1;
+
+}
+
+.landing .container .text h1 {
+    text-transform: capitalize;
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: -2px;
+
+}
+
+.landing .container .text p {
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #666;
+
+}
+
+.landing>a {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+    color: var(--main-theme-color);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+
+}
+
+.landing>a:hover {
+    color: var(--main-theme-alt);
+
+}
+
+
+/* End Landing */
