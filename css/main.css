@@ -2145,7 +2145,7 @@ header .mega-menu a {
 .discount>div {
     padding: 30px;
     height: 100vh;
-    flex-basis: 50%;
+    min-width: 50%;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -2161,8 +2161,24 @@ header .mega-menu a {
 }
 
 .discount .image {
-    background-color: var(--alt-theme-color);
-    
+    background-image: url("/images/stat-background1.jpg");
+    background-size: cover;
+    position: relative;
+    animation: switching-background 10s infinite linear;
+    -webkit-animation: switching-background 10s infinite linear;
+
+}
+
+.discount .image::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(23 135 224 / 0.97);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+
 }
 
 .discount .image .content {
@@ -2170,6 +2186,7 @@ header .mega-menu a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 2;
 
 }
 
@@ -2241,10 +2258,9 @@ header .mega-menu a {
 
 }
 
-@media (max-width: 991px) {
-    .discount>div {
-        height: fit-content;
-        flex-basis: 100%;
+@keyframes switching-background {
+    50% {
+        background-image: url("/images/stat-background2.jpg");
         
     }
     
