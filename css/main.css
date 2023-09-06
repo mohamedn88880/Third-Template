@@ -725,14 +725,14 @@ header .mega-menu a {
 
 /* End Animation */
 /* End Articals */
-/* Start Gallary */
-.gallary {
+/* Start Gallery */
+.gallery {
     background-color: var(--gray-background);
     padding: var(--section-padding) 0;
 
 }
 
-.gallary .container {
+.gallery .container {
     padding-top: var(--section-padding);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -740,7 +740,7 @@ header .mega-menu a {
 
 }
 
-.gallary .container .box {
+.gallery .container .box {
     padding: 15px;
     background-color: white;
     box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
@@ -748,14 +748,14 @@ header .mega-menu a {
 
 }
 
-.gallary .container .box .pic {
+.gallery .container .box .pic {
     display: block;
     overflow: hidden;
     cursor: pointer;
 
 }
 
-.gallary .container .pic::before {
+.gallery .container .pic::before {
     content: "";
     position: absolute;
     width: 0%;
@@ -772,14 +772,14 @@ header .mega-menu a {
     -o-transform: translate(-50%, -50%);
 }
 
-.gallary .container .box:hover .pic::before {
+.gallery .container .box:hover .pic::before {
     animation: filling-white-shadow 0.5s;
     -webkit-animation: filling-white-shadow 0.5s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
 }
 
-.gallary .container .box .pic img {
+.gallery .container .box .pic img {
     width: 100%;
     aspect-ratio: 1/1;
     /*Didn't use max-width because I don'tguaranteethatyouwillputpictureswithrequairedsizes*/
@@ -790,7 +790,7 @@ header .mega-menu a {
     -o-transition: 0.3s ease-out;
 }
 
-.gallary .container .box:hover .pic img {
+.gallery .container .box:hover .pic img {
     transform: rotate(-5deg) scale(1.1);
     -webkit-transform: rotate(-5deg) scale(1.1);
     -moz-transform: rotate(-5deg) scale(1.1);
@@ -817,7 +817,7 @@ header .mega-menu a {
 }
 
 /* End Animation */
-/* End Gallary */
+/* End Gallery */
 /* Start Features */
 .features {
     --quality-color: rgb(244 63 54);
@@ -2384,7 +2384,7 @@ footer .container .line .phone-Numbers span:first-child {
 
 }
 
-footer .container .footer-gallary img {
+footer .container .footer-gallery img {
     width: 78px;
     border: 3px solid white;
     margin: 2px;
